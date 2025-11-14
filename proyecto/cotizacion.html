@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotiza tu Pedido - Mi E-commerce</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-container">
+            <!-- Opción 1: Usar texto -->
+            <!--  <h1>🛒 MI E-COMMERCE</h1> -->
+            <!--  <p>Tu tienda de confianza</p> -->
+            <!-- Opción 2: Usar imagen de logo (descomenta para usar) -->
+            <img src="imagenes/logo.png" alt="Logo Mi E-commerce">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="historia.html">Nuestra Historia</a></li>
+                <li><a href="catalogo.html">Catálogo de Productos</a></li>
+                <li><a href="cotizacion.html">Cotiza tu Pedido</a></li>
+                <li><a href="creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container">
+        <div class="section">
+            <h2>Cotiza tu Pedido</h2>
+            <p>Selecciona los productos y las cantidades que deseas para generar tu cotización personalizada. Te contactaremos pronto para confirmar tu pedido.</p>
+            
+            <!-- FORMULARIO DE COTIZACIÓN -->
+            <div class="quote-form">
+                <h3 style="color: var(--color-principal); margin-bottom: 20px;">Información del Cliente</h3>
+                
+                <div class="form-group">
+                    <label>Nombre Completo: *</label>
+                    <input type="text" id="nombreCliente" placeholder="Ingresa tu nombre completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email: *</label>
+                    <input type="email" id="emailCliente" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Teléfono:</label>
+                    <input type="tel" id="telefonoCliente" placeholder="(57) 300-789-76-55">
+                </div>
+
+                <div class="form-group">
+                    <label>Ciudad:</label>
+                    <input type="text" id="ciudadCliente" placeholder="Tu ciudad">
+                </div>
+
+                <h3 style="margin: 30px 0 20px; color: var(--color-principal);">Selecciona tus Productos</h3>
+                <p style="color: #666; margin-bottom: 20px;">Los productos con cantidad 0 no se incluirán en la cotización.</p>
+                
+                <!-- Aquí se cargarán los productos dinámicamente con JavaScript -->
+                <div id="productosSeleccion"></div>
+
+                <!-- Total del pedido -->
+                <div class="total-display">
+                    <p style="font-size: 1.2em;">Total de tu Pedido:</p>
+                    <h3 id="totalPedido">$0.00</h3>
+                </div>
+
+                <!-- Botón para generar cotización -->
+                <button type="button" class="btn" onclick="generarCotizacion()" style="width: 100%; margin-top: 20px; font-size: 1.1em;">
+                    📋 Generar Cotización
+                </button>
+
+                <p style="margin-top: 20px; color: #666; font-size: 0.9em; text-align: center;">
+                    * Campos obligatorios. Al generar la cotización, nos pondremos en contacto contigo para confirmar tu pedido.
+                </p>
+            </div>
+        </div>
+
+        <!-- Información adicional -->
+        <div class="section">
+    <h2>💝 Formas de Pago</h2>
+    <div class="info-cards">
+        <div class="card">
+            <h3>💳 Tarjetas</h3>
+            <p>Paga con todas tus tarjetas de crédito y débito: Visa, Mastercard, American Express. Fácil, seguro y sin complicaciones para que tu regalo llegue a tiempo.</p>
+        </div>
+        <div class="card">
+            <h3>🏦 Transferencia Bancaria</h3>
+            <p>Realiza transferencias directas a nuestras cuentas autorizadas. Ideal para pedidos grandes o personalizados, garantizando que tu detalle especial esté seguro desde el inicio.</p>
+        </div>
+        <div class="card">
+            <h3>💰 Métodos Alternativos</h3>
+            <p>Paga con PSE, Nequi, Daviplata o incluso al recibir tu regalo en ciudades principales. Queremos que sea fácil sorprender a tus seres queridos sin complicaciones.</p>
+        </div>
+    </div>
+</div>
+
+
+        <div class="section">
+    <h2>📦 Información de Envío</h2>
+    <div class="card">
+        <h3>🚚 Entrega con Amor</h3>
+        <p><strong>Tiempo de entrega:</strong> 2-5 días hábiles, para que tu regalo llegue en el momento perfecto.</p>
+        <p><strong>Cobertura:</strong> Enviamos a todo el territorio colombiano, llevando alegría a cada rincón.</p>
+        <p><strong>Costo de envío:</strong> Variable según ciudad y peso del pedido, con opciones que se ajustan a tus necesidades.</p>
+        <p><strong>Seguimiento:</strong> Recibirás un código de seguimiento por email, para que sigas cada paso de tu regalo hasta llegar a su destino.</p>
+        <p><strong>Empaque:</strong> Todos los productos son cuidadosamente empacados con materiales seguros y detalles que hacen de la entrega una experiencia especial.</p>
+    </div>
+</div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos tu tienda de confianza con los mejores productos y servicio al cliente excepcional.</p>
+                <p>Comprometidos con la excelencia desde 2014.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>📍 Calle Principal #123</p>
+                <p>Valledupar, Cesar - Colombia</p>
+                <p>📞 Teléfono: (123) 456-7890</p>
+                <p>✉️ Email: info@miecommerce.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                        <img src="imagenes/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                        <img src="imagenes/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/573001234567" target="_blank" title="WhatsApp">
+                        <img src="imagenes/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                        <img src="imagenes/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Instituciones</h3>
+                <div class="institutional-logos">
+                    <img src="imagenes/logo-gobernacion.png" alt="Gobernación del Cesar" onerror="this.src='https://via.placeholder.com/150x80/ffffff/2c3e50?text=Gobernacion+Cesar'">
+                    <img src="imagenes/logo-upc.png" alt="Universidad Popular del Cesar" onerror="this.src='https://via.placeholder.com/150x80/ffffff/2c3e50?text=UPC'">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mi E-commerce. Todos los derechos reservados.</p>
+            <p>Desarrollado por estudiantes de la Universidad Popular del Cesar</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+    // Cargar los productos cuando la página se abra
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof cargarProductosCotizacion === 'function') {
+                cargarProductosCotizacion();
+            }
+        });
+</script>
+</body>
+</html>

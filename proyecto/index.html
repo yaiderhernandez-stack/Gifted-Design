@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi E-commerce</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!-- ========================================
+         HEADER: Logo y Navegación
+         PERSONALIZABLE: Cambia el nombre y slogan
+         ======================================== -->
+    <header>
+        <div class="logo-container">
+            <!-- Opción 1: Usar texto -->
+
+          <!--  <h1>🛒 MI E-COMMERCE</h1> -->
+          <!--  <p>Tu tienda de confianza</p> -->
+            
+            <!-- Opción 2: Usar imagen de logo (descomenta para usar) -->
+            <img src="imagenes/logo.png" alt="Logo Mi E-commerce"> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="historia.html">Nuestra Historia</a></li>
+                <li><a href="catalogo.html">Catálogo de Productos</a></li>
+                <li><a href="cotizacion.html">Cotiza tu Pedido</a></li>
+                <li><a href="creditos.html">Créditos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========================================
+         CAROUSEL: Carrusel de imágenes
+         PERSONALIZABLE: Cambia las imágenes
+         ======================================== -->
+    <div class="carousel" id="carouselContainer">
+        <div id="carouselImages">
+            <div class="slide">
+                <img src="imagenes/banner1.png" alt="Banner 1">
+                <div class="slide-caption centered">Compra fácil, rápido y seguro 🛒</div>
+            </div>
+            <div class="slide">
+                <img src="imagenes/banner2.jpg" alt="Banner 2">
+                <div class="slide-caption centered">Envíos a todo el país 📦</div>
+            </div>
+            <div class="slide">
+                <img src="imagenes/banner3.jpg" alt="Banner 3">
+                <div class="slide-caption centered">Grandes descuentos este mes 💰</div>
+            </div>
+        </div>
+
+        <!-- Flechas de navegación -->
+        <button class="carousel-btn prev" onclick="moveCarousel(-1)">❮</button>
+        <button class="carousel-btn next" onclick="moveCarousel(1)">❯</button>
+
+        <div id="carouselIndicators"></div>
+    </div>
+
+
+    <!-- ========================================
+         CONTENIDO PRINCIPAL
+         ======================================== -->
+    <div class="container">
+        <div class="section">
+            <h2>Bienvenidos a Nuestro E-commerce</h2>
+            <p>Somos una empresa comprometida con ofrecerte los mejores productos y servicios. Nuestra misión es brindarte una experiencia de compra excepcional con productos de alta calidad y precios competitivos.</p>
+            <p>Navega por nuestro catálogo y descubre todo lo que tenemos para ofrecerte. Estamos aquí para hacer tu vida más fácil.</p>
+        </div>
+
+        <!-- Imagen adicional para la landing page -->
+        <div class="image-container">
+            <img src="imagenes/inicio-principal.jpg" alt="Nuestra Tienda" class="content-image" onerror="this.src='https://via.placeholder.com/600x300/34495e/ffffff?text=Nuestra+Tienda'">
+        </div>
+
+        <!-- Cards de información -->
+        <div class="info-cards">
+            <div class="card">
+                <h3>🚚 Envíos Rápidos</h3>
+                <p>Enviamos a todo el país en 24-48 horas. Tu satisfacción es nuestra prioridad. Contamos con los mejores servicios de logística para garantizar que tu pedido llegue en perfectas condiciones.</p>
+            </div>
+            <div class="card">
+                <h3>💯 Calidad Garantizada</h3>
+                <p>Todos nuestros productos cuentan con garantía y soporte técnico. Trabajamos solo con proveedores certificados para asegurar la mejor calidad en cada artículo.</p>
+            </div>
+            <div class="card">
+                <h3>💳 Pago Seguro</h3>
+                <p>Múltiples métodos de pago seguros y confiables para tu tranquilidad. Aceptamos tarjetas de crédito, débito, transferencias bancarias y pagos en línea.</p>
+            </div>
+        </div>
+
+        <!-- Sección adicional con imagen -->
+        <div class="section">
+            <h2>¿Por Qué Elegirnos?</h2>
+            <p>Con más de 10 años de experiencia en el mercado, nos hemos consolidado como líderes en nuestro sector. Miles de clientes satisfechos respaldan la calidad de nuestros productos y servicios.</p>
+            
+            <div class="image-container">
+                <img src="imagenes/por-que-elegirnos.jpg" alt="Por qué elegirnos" class="content-image" onerror="por-que-elegirnos.jpg">
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         FOOTER: Pie de Página
+         PERSONALIZABLE: Cambia la información
+         ======================================== -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Somos tu tienda de confianza con los mejores productos y servicio al cliente excepcional.</p>
+                <p>Comprometidos con la excelencia desde 2014.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>📍 Calle Principal #123</p>
+                <p>Valledupar, Cesar - Colombia</p>
+                <p>📞 Teléfono: (123) 456-7890</p>
+                <p>✉️ Email: info@miecommerce.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+                        <img src="imagenes/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+                        <img src="imagenes/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://wa.me/573001234567" target="_blank" title="WhatsApp">
+                        <img src="imagenes/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" title="YouTube">
+                        <img src="imagenes/youtube.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Instituciones</h3>
+                <div class="institutional-logos">
+                    <!-- Logo Gobernación del Cesar -->
+                    <img src="imagenes/logo-gobernacion.png" alt="Gobernación del Cesar" onerror="this.src='https://via.placeholder.com/150x80/ffffff/2c3e50?text=Gobernacion+Cesar'">
+                    
+                    <!-- Logo Universidad Popular del Cesar -->
+                    <img src="imagenes/logo-upc.png" alt="Universidad Popular del Cesar" onerror="this.src='https://via.placeholder.com/150x80/ffffff/2c3e50?text=UPC'">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mi E-commerce. Todos los derechos reservados.</p>
+            <p>Desarrollado por estudiantes de la Universidad Popular del Cesar</p>
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
